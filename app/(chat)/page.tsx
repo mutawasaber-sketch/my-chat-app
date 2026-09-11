@@ -2,230 +2,71 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>عقلك - Aqlak</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aqlak - عقلك</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif; }
-body {
-  background:#0a0f0d;
-  color:#fff;
-  height:100vh;
-  overflow:hidden;
-  position:relative;
-}
-body::before {
-  content:'';
-  position:absolute;
-  width:400px; height:400px;
-  background:radial-gradient(circle, rgba(0,255,120,0.25), transparent 70%);
-  top:20%; right:10%;
-  filter:blur(80px);
-  z-index:0;
-}
-body::after {
-  content:'';
-  position:absolute;
-  width:300px; height:300px;
-  background:radial-gradient(circle, rgba(0,200,80,0.2), transparent 70%);
-  bottom:10%; left:5%;
-  filter:blur(80px);
-  z-index:0;
-}
-.phone {
-  position:relative;
-  z-index:1;
-  max-width:420px;
-  margin:0 auto;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  background:rgba(0,0,0,0.3);
-  backdrop-filter:blur(20px);
-}
-.header {
-  margin:12px;
-  padding:14px 18px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:20px;
-  backdrop-filter:blur(20px);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.header h1 { font-size:20px; font-weight:700; }
-.header small { display:block; color:#7CFC9A; font-size:12px; font-weight:400; }
-.header .dots { color:#7CFC9A; font-size:20px; letter-spacing:4px; }
-.back { color:#7CFC9A; font-size:22px; }
-.chat {
-  flex:1;
-  overflow-y:auto;
-  padding:10px 14px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.msg-ai {
-  align-self:flex-start;
-  max-width:85%;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.12);
-  backdrop-filter:blur(18px);
-  border-radius:18px;
-  padding:12px 14px;
-  font-size:14px;
-  line-height:1.7;
-}
-.msg-ai .name { color:#7CFC9A; font-size:13px; margin-bottom:6px; display:flex; align-items:center; gap:8px; }
-.msg-ai .name::before {
-  content:'🧠';
-  background:rgba(0,255,120,0.15);
-  width:28px; height:28px;
-  display:inline-flex; align-items:center; justify-content:center;
-  border-radius:50%;
-}
-.msg-user {
-  align-self:flex-end;
-  max-width:80%;
-  background:rgba(0,200,80,0.35);
-  border:1px solid rgba(0,255,120,0.3);
-  backdrop-filter:blur(18px);
-  border-radius:18px;
-  padding:12px 14px;
-  font-size:14px;
-  line-height:1.7;
-}
-.plan-item { display:flex; gap:8px; margin:8px 0; align-items:flex-start; }
-.plan-item span.icon { background:rgba(0,255,120,0.2); width:24px; height:24px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; }
-.actions { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
-.actions button {
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(124,252,154,0.3);
-  color:#7CFC9A;
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:12px;
-  cursor:pointer;
-}
-.input-bar {
-  position:sticky;
-  bottom:0;
-  margin:12px;
-  padding:8px 8px 8px 8px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:30px;
-  backdrop-filter:blur(20px);
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.input-bar input {
-  flex:1;
-  background:transparent;
-  border:none;
-  outline:none;
-  color:#fff;
-  font-size:15px;
-  padding:10px;
-}
-.input-bar input::placeholder { color:rgba(255,255,255,0.4); }
-.icon-btn {
-  width:40px; height:40px;
-  border-radius:50%;
-  border:1px solid rgba(124,252,154,0.4);
-  background:transparent;
-  color:#7CFC9A;
-  font-size:20px;
-  cursor:pointer;
-  display:flex; align-items:center; justify-content:center;
-}
-.send-btn {
-  width:48px; height:48px;
-  border-radius:50%;
-  border:none;
-  background:#7CFC9A;
-  color:#000;
-  font-size:22px;
-  cursor:pointer;
-  display:flex; align-items:center; justify-content:center;
-}
+*{box-sizing:border-box;font-family:'Segoe UI',Tahoma}
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);display:flex;flex-direction:column;align-items:center;color:#fff}
+.glass{background:rgba(255,255,255,.1);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,.2);border-radius:20px}
+#header{width:95%;max-width:600px;margin:15px;padding:15px;text-align:center}
+#header h1{margin:0;font-size:24px}
+#header span{color:#4ade80;font-size:14px}
+#chat{width:95%;max-width:600px;height:55vh;overflow-y:auto;padding:15px;margin-bottom:10px}
+.msg{padding:10px 15px;margin:8px 0;border-radius:15px;max-width:80%}
+.user{background:#4f46e5;margin-right:auto}
+.ai{background:rgba(255,255,255,.15);margin-left:auto}
+#controls{width:95%;max-width:600px;padding:15px;display:flex;flex-direction:column;gap:10px}
+#keyRow{display:flex;gap:8px}
+input,button{border:none;border-radius:12px;padding:12px;font-size:16px}
+input{flex:1;background:rgba(0,0,0,.3);color:#fff;outline:none}
+button{background:#22c55e;color:#fff;font-weight:bold;cursor:pointer;min-width:90px}
+button:hover{opacity:.9}
+#inputRow{display:flex;gap:8px}
 </style>
 </head>
 <body>
-<div class="phone">
-  <div class="header">
-    <div class="back">‹</div>
-    <div style="text-align:center">
-      <h1>عقلك - Aqlak</h1>
-      <small>AI Assistant • Online</small>
-    </div>
-    <div class="dots">•••</div>
-  </div>
-
-  <div class="chat" id="chat">
-    <div class="msg-ai">
-      <div class="name">Aqlak AI</div>
-      مرحباً! أنا عقلك - مساعدك الذكي.<br>كيف أقدر أساعدك اليوم؟
-    </div>
-    <div class="msg-user">
-      كيف يمكنني تنظيم وقتي اليوم؟<br>أريد خطة بسيطة وسريعة ؟
-    </div>
-    <div class="msg-ai">
-      <div class="name">Aqlak AI</div>
-      بالطبع! إليك خطة يومية بسيطة وفعالة:
-      <div class="plan-item"><span class="icon">✓</span><div>صباحًا: 08:00 - 08:30<br>• مراجعة المهام والأهداف لليوم</div></div>
-      <div class="plan-item"><span class="icon">◷</span><div>صباحًا: 08:30 - 09:30<br>• التركيز على المهمة الأهم (Deep Work)</div></div>
-      <div class="plan-item"><span class="icon">🍃</span><div>ظهرًا: 12:30 - 01:00<br>استراحة قصيرة + مشي/ماء</div></div>
-      <div class="actions">
-        <button onclick="alert('تم تعديل الخطة')">تعديل الخطة</button>
-        <button onclick="alert('تم ضبط التذكير')">تذكير بعد ساعة</button>
-        <button onclick="alert('تفاصيل أكثر')">تفاصيل أكثر</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="input-bar">
-    <button class="icon-btn">+</button>
-    <input type="text" id="msgInput" placeholder="اكتب رسالتك..." onkeypress="if(event.key==='Enter') sendMsg()">
-    <button class="icon-btn">🎤</button>
-    <button class="icon-btn">🖼</button>
-    <button class="send-btn" onclick="sendMsg()">➤</button>
-  </div>
+<div id="header" class="glass">
+<h1>Aqlak - عقلك</h1>
+<span>● AI Assistant • Online</span>
 </div>
-
+<div id="chat" class="glass"></div>
+<div id="controls" class="glass">
+<div id="keyRow">
+<input type="password" id="apiKey" placeholder="حط مفتاح API هنا...">
+<button onclick="saveKey()">حفظ</button>
+</div>
+<div id="inputRow">
+<input type="text" id="msgInput" placeholder="مرحبا... اكتب رسالتك">
+<button onclick="sendMsg()">إرسال</button>
+</div>
+<button onclick="setReminder()" style="background:#3b82f6">تذكير بعد ساعة</button>
+</div>
 <script>
-const WORKER_URL = "حط_رابط_الوركر_هنا";
-async function sendMsg(){
-  const input = document.getElementById('msgInput');
-  const text = input.value.trim();
-  if(!text) return;
-  const chat = document.getElementById('chat');
-  const u = document.createElement('div');
-  u.className='msg-user'; u.textContent=text;
-  chat.appendChild(u);
-  input.value='';
-  chat.scrollTop = chat.scrollHeight;
-
-  const a = document.createElement('div');
-  a.className='msg-ai';
-  a.innerHTML='<div class="name">Aqlak AI</div> جاري الكتابة...';
-  chat.appendChild(a);
-  chat.scrollTop = chat.scrollHeight;
-
-  try{
-    if(WORKER_URL.includes('حط_رابط')){
-      setTimeout(()=>{ a.innerHTML='<div class="name">Aqlak AI</div> تم استلام رسالتك: "'+text+'"<br>اربط الـ Worker عشان ارد عليك بذكاء حقيقي.'; chat.scrollTop=chat.scrollHeight; },800);
-      return;
-    }
-    const res = await fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text})});
-    const data = await res.json();
-    a.innerHTML='<div class="name">Aqlak AI</div>'+(data.reply||data.response||'تم');
-  }catch(e){
-    a.innerHTML='<div class="name">Aqlak AI</div> حصل خطأ في الاتصال.';
-  }
-  chat.scrollTop = chat.scrollHeight;
+let key = localStorage.getItem('aqlak_key') || '';
+if(key) document.getElementById('apiKey').value = key;
+function saveKey(){
+ key = document.getElementById('apiKey').value.trim();
+ localStorage.setItem('aqlak_key',key);
+ alert('تم حفظ المفتاح');
 }
+function addMsg(t,c){let d=document.createElement('div');d.className='msg '+c;d.textContent=t;document.getElementById('chat').appendChild(d);document.getElementById('chat').scrollTop=9999}
+async function sendMsg(){
+ let inp=document.getElementById('msgInput');let txt=inp.value.trim();if(!txt)return;
+ if(!key){alert('حط المفتاح الأول');return}
+ addMsg(txt,'user');inp.value='';addMsg('...','ai');
+ try{
+  let r=await fetch('https://api.openai.com/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+key},body:JSON.stringify({model:'gpt-4o-mini',messages:[{role:'user',content:txt}]})});
+  let j=await r.json();document.querySelectorAll('.ai').pop().remove();
+  addMsg(j.choices[0].message.content,'ai');
+ }catch(e){document.querySelectorAll('.ai').pop().remove();addMsg('خطأ في الاتصال بالمفتاح','ai')}
+}
+function setReminder(){
+ Notification.requestPermission().then(p=>{
+  setTimeout(()=>{new Notification('mutawasaber-sketch.github.io',{body:'تم ضبط التذكير'});alert('يعرض موقع mutawasaber-sketch.github.io\nتم ضبط التذكير')},2000);
+ });
+}
+document.getElementById('msgInput').addEventListener('keypress',e=>{if(e.key==='Enter')sendMsg()});
+addMsg('أهلا بيك في عقلك! حط المفتاح وابدأ','ai');
 </script>
 </body>
 </html>
